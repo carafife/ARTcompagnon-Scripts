@@ -1,19 +1,36 @@
 # ARTcompagnon-Scripts
 
-Pack de scripts CTL, Python, Bash et Lua pour ARTcompagnon
+Pack de scripts CTL, Python, Bash et Lua pour ARTcompagnon.
 
-## Structure
+## Structure du Depot
 
-ctl-packs/pack-basic/ctl/
-python-packs/pack-basic/python/ (photo, aide, utilitaire)
-bash-packs/pack-basic/bash/ (photo, aide, utilitaire)
-lua-packs/pack-basic/lua/ (photo, aide, utilitaire)
+bash/
+  - photo/
+  - utilitaire/
+python/
+  - photo/
+  - utilitaire/
+lua/
+  - photo/
+  - utilitaire/
+ctl/
+  - photo/
+
 install-scripts/
+  - install-pack.sh
 
 ## Installation
 
-Télécharger le pack depuis Releases et installer via ARTcompagnon.
+1. Telecharger le pack .zip depuis Releases
+2. Ouvrir ARTcompagnon → Scripts ART → Installer Pack
+3. Selectionner le fichier .zip
+4. Le script d'installation ajoute les scripts aux dossiers ART
+
+## Important
+
+Les scripts legacy (smart_masking.sh, nind_denoise_raw.sh) sont preserves lors de l'installation.
+Les nouveaux scripts sont ajoutes sans ecraser les existants.
 
 ## Licence
 
-MIT - Créé avec ❤️ par carafife
+MIT - Cree avec amour par carafife

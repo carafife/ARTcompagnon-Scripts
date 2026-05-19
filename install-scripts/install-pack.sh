@@ -11,16 +11,22 @@ mkdir -p "$TEMP_DIR"
 unzip -q "$PACK_ZIP" -d "$TEMP_DIR"
 
 # Créer les dossiers destination
-mkdir -p "$HOME/.config/ART/ctlscripts"
-mkdir -p "$HOME/.config/ART/usercommands/python"
-mkdir -p "$HOME/.config/ART/usercommands/bash"
-mkdir -p "$HOME/.config/ART/usercommands/lua"
+mkdir -p "$HOME/.config/ART/usercommands/bash/photo"
+mkdir -p "$HOME/.config/ART/usercommands/bash/utilitaire"
+mkdir -p "$HOME/.config/ART/usercommands/python/photo"
+mkdir -p "$HOME/.config/ART/usercommands/python/utilitaire"
+mkdir -p "$HOME/.config/ART/usercommands/lua/photo"
+mkdir -p "$HOME/.config/ART/usercommands/lua/utilitaire"
+mkdir -p "$HOME/.config/ART/ctlscripts/photo"
 
-# Copier directement les fichiers au bon endroit
-cp -r "$TEMP_DIR/ctl-packs/pack-basic/ctl"/* "$HOME/.config/ART/ctlscripts/" 2>/dev/null
-cp -r "$TEMP_DIR/python-packs/pack-basic/python"/* "$HOME/.config/ART/usercommands/python/" 2>/dev/null
-cp -r "$TEMP_DIR/bash-packs/pack-basic/bash"/* "$HOME/.config/ART/usercommands/bash/" 2>/dev/null
-cp -r "$TEMP_DIR/lua-packs/pack-basic/lua"/* "$HOME/.config/ART/usercommands/lua/" 2>/dev/null
+# Copier AVEC LE CONTENU (ajouter /* pour copier les fichiers, pas le dossier!)
+cp -r "$TEMP_DIR/bash/photo"/* "$HOME/.config/ART/usercommands/bash/photo/" 2>/dev/null
+cp -r "$TEMP_DIR/bash/utilitaire"/* "$HOME/.config/ART/usercommands/bash/utilitaire/" 2>/dev/null
+cp -r "$TEMP_DIR/python/photo"/* "$HOME/.config/ART/usercommands/python/photo/" 2>/dev/null
+cp -r "$TEMP_DIR/python/utilitaire"/* "$HOME/.config/ART/usercommands/python/utilitaire/" 2>/dev/null
+cp -r "$TEMP_DIR/lua/photo"/* "$HOME/.config/ART/usercommands/lua/photo/" 2>/dev/null
+cp -r "$TEMP_DIR/lua/utilitaire"/* "$HOME/.config/ART/usercommands/lua/utilitaire/" 2>/dev/null
+cp -r "$TEMP_DIR/ctl/photo"/* "$HOME/.config/ART/ctlscripts/photo/" 2>/dev/null
 
 rm -rf "$TEMP_DIR"
 
