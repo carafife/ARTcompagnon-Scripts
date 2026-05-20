@@ -28,6 +28,8 @@ cp -r "$TEMP_DIR/lua/photo"/* "$HOME/.config/ART/usercommands/lua/photo/" 2>/dev
 cp -r "$TEMP_DIR/lua/utilitaire"/* "$HOME/.config/ART/usercommands/lua/utilitaire/" 2>/dev/null
 cp -r "$TEMP_DIR/ctl/photo"/* "$HOME/.config/ART/ctlscripts/photo/" 2>/dev/null
 
+mkdir -p "$HOME/Documents/ARTcompagnon-Scripts-Help"
+cp -r "$TEMP_DIR/aide"/* "$HOME/Documents/ARTcompagnon-Scripts-Help/" 2>/dev/null
 rm -rf "$TEMP_DIR"
 
 echo "✅ Pack installé!"
