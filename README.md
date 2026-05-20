@@ -31,6 +31,24 @@ install-scripts/
 Les scripts legacy (smart_masking.sh, nind_denoise_raw.sh) sont preserves lors de l'installation.
 Les nouveaux scripts sont ajoutes sans ecraser les existants.
 
+---
+
+## 📋 Créer vos propres usercommands
+
+Si vous souhaitez lancer d autres scripts ou logiciels depuis ART (Smart Masking, Hugin, HDR Merge, etc.), voici comment créer vos propres fichiers usercommand.
+
+### Structure d un usercommand
+
+Créez un fichier `.txt` dans `~/.config/ART/usercommands/` :
+
+````
+[ART UserCommand]
+Label=* NOM_DE_VOTRE_APPLICATION
+Command=* /chemin/complet/vers/script.sh
+FileType=* raw|jpg|jpeg|tif|tiff|png
+NumArgs=1
+```
+
 ## Licence
 
 MIT - Cree avec amour par carafife
