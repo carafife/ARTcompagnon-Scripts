@@ -30,6 +30,10 @@ cp -r "$TEMP_DIR/lua/photo"/* "$HOME/.config/ART/usercommands/lua/photo/" 2>/dev
 cp -r "$TEMP_DIR/lua/utilitaire"/* "$HOME/.config/ART/usercommands/lua/utilitaire/" 2>/dev/null
 cp -r "$TEMP_DIR/ctl/CaraCTL"/* "$HOME/.config/ART/ctlscripts/CaraCTL/" 2>/dev/null
 cp -r "$TEMP_DIR/ctl/ArtScript"/* "$HOME/.config/ART/ctlscripts/ArtScript/" 2>/dev/null
+# Les .ctl a la RACINE de ctl/ vont a la racine de ctlscripts/ : c'est le seul
+# endroit lu par la liste de scripts CTL du module Correction des couleurs
+# (rtgui/colorcorrection.cc scanne sans recursion et ignore les dossiers).
+cp "$TEMP_DIR/ctl"/*.ctl "$HOME/.config/ART/ctlscripts/" 2>/dev/null
 cp -r "$TEMP_DIR/usercommands"/* "$HOME/.config/ART/usercommands/templates/" 2>/dev/null
 
 mkdir -p "$HOME/Documents/ARTcompagnon-Scripts-Help"
